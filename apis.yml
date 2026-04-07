@@ -14,9 +14,9 @@ apis:
     humanUrl: https://www.scala-lang.org/api/current/
     baseUrl: https://www.scala-lang.org/api/current/
     tags:
-      - standard library
-      - core
-      - documentation
+      - Core
+      - Documentation
+      - Standard Library
     properties:
       - type: Documentation
         url: https://www.scala-lang.org/api/current/
@@ -35,10 +35,10 @@ apis:
     humanUrl: https://doc.akka.io/docs/akka-http/current/
     baseUrl: https://doc.akka.io/api/akka-http/current/
     tags:
-      - http
-      - server
-      - client
-      - reactive
+      - Client
+      - Http
+      - Reactive
+      - Server
     properties:
       - type: Documentation
         url: https://doc.akka.io/docs/akka-http/current/
@@ -55,9 +55,9 @@ apis:
     humanUrl: https://www.playframework.com/
     baseUrl: https://www.playframework.com/documentation/latest/api/scala/
     tags:
-      - web framework
-      - mvc
-      - reactive
+      - Mvc
+      - Reactive
+      - Web Framework
     properties:
       - type: Documentation
         url: https://www.playframework.com/documentation/latest/Home
@@ -74,9 +74,9 @@ apis:
     humanUrl: https://typelevel.org/cats/
     baseUrl: https://typelevel.org/cats/api/
     tags:
-      - functional programming
-      - type classes
-      - category theory
+      - Category Theory
+      - Functional Programming
+      - Type Classes
     properties:
       - type: Documentation
         url: https://typelevel.org/cats/
@@ -93,10 +93,10 @@ apis:
     humanUrl: https://scala-slick.org/
     baseUrl: https://scala-slick.org/doc/stable/api/
     tags:
-      - database
-      - orm
-      - functional
-      - sql
+      - Database
+      - Functional
+      - Orm
+      - Sql
     properties:
       - type: Documentation
         url: https://scala-slick.org/doc/stable/
@@ -113,10 +113,10 @@ apis:
     humanUrl: https://zio.dev/
     baseUrl: https://javadoc.io/doc/dev.zio/zio_3/latest/
     tags:
-      - functional effects
-      - async
-      - concurrent
-      - type-safe
+      - Async
+      - Concurrent
+      - Functional Effects
+      - Type-Safe
     properties:
       - type: Documentation
         url: https://zio.dev/overview/
@@ -133,10 +133,10 @@ apis:
     humanUrl: https://circe.github.io/circe/
     baseUrl: https://circe.github.io/circe/api/
     tags:
-      - json
-      - parsing
-      - serialization
-      - functional
+      - Functional
+      - Json
+      - Parsing
+      - Serialization
     properties:
       - type: Documentation
         url: https://circe.github.io/circe/
@@ -151,11 +151,11 @@ maintainers:
     email: scala.center@epfl.ch
     url: https://scala.epfl.ch/
 tags:
-  - scala
-  - programming language
-  - jvm
-  - functional programming
-  - object-oriented
+  - Functional Programming
+  - Jvm
+  - Object-Oriented
+  - Programming Language
+  - Scala
 include: []
 common:
   - type: Website
