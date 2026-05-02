@@ -1,0 +1,16 @@
+{
+  "example": {
+    "title": "ZIO HTTP Server",
+    "description": "Example of a simple ZIO HTTP server implementing a REST API endpoint.",
+    "language": "scala",
+    "framework": "zio-http",
+    "scalaVersion": "3",
+    "sbtDependency": "\"dev.zio\" %% \"zio-http\" % \"3.0.1\"",
+    "code": "import zio._\nimport zio.http._\nimport zio.json._\n\ncase class User(id: String, name: String, email: String)\nobject User:\n  given JsonEncoder[User] = DeriveJsonEncoder.gen[User]\n  given JsonDecoder[User] = DeriveJsonDecoder.gen[User]\n\nobject UserService:\n  val routes: Routes[Any, Nothing] =\n    Routes(\n      Method.GET / \"users\" -> handler {\n        val users = List(\n          User(\"1\", \"Alice\", \"alice@example.com\"),\n          User(\"2\", \"Bob\", \"bob@example.com\")\n        )\n        Response.json(users.toJsonPretty)\n      },\n\n      Method.GET / \"users\" / string(\"id\") -> handler { (id: String, _: Request) =>\n        val user = User(id, s\"User $id\", s\"user$id@example.com\")\n        Response.json(user.toJsonPretty)\n      },\n\n      Method.POST / \"users\" -> handler { (req: Request) =>\n        for\n          body <- req.body.asString\n          user <- ZIO.fromEither(body.fromJson[User]).mapError(e => Response.badRequest(e))\n        yield Response.json(user.toJsonPretty).status(Status.Created)\n      }\n    )\n\nobject Main extends ZIOAppDefault:\n  def run = Server.serve(UserService.routes).provide(Server.default)",
+    "notes": [
+      "ZIO HTTP uses direct-style Scala 3 syntax with ZIO effects",
+      "All routes are purely functional and composable",
+      "Server.default listens on port 8080"
+    ]
+  }
+}

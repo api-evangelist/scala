@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "api": "https://api-evangelist.com/vocabulary/",
+    "scala": "https://api-evangelist.com/vocabulary/scala/",
+
+    "ProgrammingLanguage": "schema:ComputerLanguage",
+    "ScalaLibrary": "scala:ScalaLibrary",
+    "ScalaFramework": "scala:ScalaFramework",
+    "TypeClass": "scala:TypeClass",
+    "Effect": "scala:Effect",
+    "Fiber": "scala:Fiber",
+    "Actor": "scala:Actor",
+    "BuildTool": "scala:BuildTool",
+    "ScalaPlugin": "scala:ScalaPlugin",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "documentation": "schema:documentation",
+    "version": "schema:version",
+    "license": "schema:license",
+    "provider": "schema:provider",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "SoftwareSourceCode": "schema:SoftwareSourceCode",
+    "WebAPI": "schema:WebAPI",
+
+    "baseUrl": "api:baseUrl",
+    "apiType": "api:apiType",
+    "tags": "api:tags",
+
+    "scalaVersion": "scala:scalaVersion",
+    "targetRuntime": "scala:targetRuntime",
+    "effectSystem": "scala:effectSystem",
+    "buildTool": "scala:buildTool",
+    "concurrencyModel": "scala:concurrencyModel",
+    "mavenArtifact": "scala:mavenArtifact",
+    "sbtDependency": "scala:sbtDependency",
+    "typeclassInstances": "scala:typeclassInstances",
+    "functionalStyle": "scala:functionalStyle",
+    "jvmCompatibility": "scala:jvmCompatibility",
+    "Organization": {
+      "@id": "schema:Organization",
+      "@type": "@id"
+    }
+  }
+}

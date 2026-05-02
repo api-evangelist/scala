@@ -1,0 +1,192 @@
+vocabulary:
+  name: Scala Vocabulary
+  description: >-
+    Domain vocabulary for the Scala programming language ecosystem, covering
+    core language concepts, functional programming abstractions, concurrency
+    models, build tooling, and the major frameworks and libraries used in
+    the Scala community.
+  created: '2026-05-02'
+  modified: '2026-05-02'
+  terms:
+    - term: Actor Model
+      definition: >-
+        A concurrent computation model where actors are the fundamental unit
+        of computation, each with a private state and mailbox. Actors
+        communicate by sending asynchronous messages. Implemented in Scala
+        via Akka, enabling highly concurrent and distributed systems.
+      tags:
+        - Concurrency
+        - Distributed Systems
+    - term: Build Server Protocol (BSP)
+      definition: >-
+        A protocol for communication between IDEs and build tools like sbt,
+        Mill, and Bloop. Enables IntelliJ IDEA and VS Code (via Metals) to
+        leverage build tool features for compilation, testing, and diagnostics
+        without direct build tool integration.
+      tags:
+        - Developer Tools
+        - Tooling
+    - term: Case Class
+      definition: >-
+        A Scala class that automatically provides equals, hashCode, toString,
+        copy, and pattern matching support. Immutable by default and ideal for
+        modeling data in functional programs. Automatically becomes a product
+        type for use with type class derivation.
+      tags:
+        - Language Feature
+        - Scala
+    - term: cats-effect
+      definition: >-
+        A Scala library providing a purely functional runtime system for
+        asynchronous and concurrent programs built on the IO monad. The
+        foundation of the Typelevel ecosystem (http4s, fs2, Doobie). Provides
+        green thread-like fibers via JVM virtual threads in Scala 3.
+      tags:
+        - Concurrency
+        - Functional Programming
+        - Library
+    - term: Effect System
+      definition: >-
+        A type-level mechanism for tracking and managing computational effects
+        (I/O, exceptions, state, concurrency) in a functional program. ZIO
+        and cats-effect are the two dominant effect systems in Scala, enabling
+        purely functional, composable programs.
+      tags:
+        - Functional Programming
+        - Language Feature
+    - term: Fiber
+      definition: >-
+        A lightweight, user-space thread managed by an effect runtime (ZIO or
+        cats-effect). Fibers enable massive concurrency without the overhead
+        of OS threads. Thousands of fibers can run concurrently on a small
+        thread pool. Analogous to Go goroutines or Java virtual threads.
+      tags:
+        - Concurrency
+        - Runtime
+    - term: For Comprehension
+      definition: >-
+        Scala syntactic sugar over flatMap/map/filter chains. Used to compose
+        monadic operations (Option, Either, IO, Future, List) in a readable
+        sequential style. De-sugars into nested flatMap calls by the compiler.
+      tags:
+        - Language Feature
+        - Scala
+    - term: fs2
+      definition: >-
+        Functional Streams for Scala — a library for purely functional,
+        effectful, and concurrent stream processing built on cats-effect.
+        Used for processing large datasets, streaming HTTP bodies, Kafka
+        consumer loops, and file I/O in the Typelevel ecosystem.
+      tags:
+        - Functional Programming
+        - Library
+        - Streaming
+    - term: Higher-Kinded Type (HKT)
+      definition: >-
+        A type that abstracts over type constructors (types that take other
+        types as parameters, like F[_]). Enables writing code polymorphic
+        over any monad, functor, or applicative. Central to Cats type classes.
+      tags:
+        - Functional Programming
+        - Type System
+    - term: Implicits / Given Instances
+      definition: >-
+        Scala's mechanism for type class instances and implicit conversions.
+        In Scala 2 these are `implicit val/def`; in Scala 3 they become
+        `given/using` syntax. Enables ad-hoc polymorphism and the type class
+        pattern without inheritance.
+      tags:
+        - Language Feature
+        - Scala
+        - Scala 3
+    - term: Mill
+      definition: >-
+        An alternative Scala build tool designed to be fast, simple, and
+        extensible. Mill 1.0 ships with GraalVM native launchers achieving
+        ~100ms startup. Growing alternative to sbt, particularly for
+        polyglot projects.
+      tags:
+        - Build Tool
+        - Tooling
+    - term: Monad
+      definition: >-
+        A type class (abstraction) from category theory that enables chaining
+        sequential computations. In Scala, types like Option, Either, Future,
+        IO, and ZIO are monads. Provides flatMap (bind) for sequencing
+        effects in a principled way.
+      tags:
+        - Category Theory
+        - Functional Programming
+    - term: Opaque Type
+      definition: >-
+        A Scala 3 feature for creating type aliases that do not expose their
+        underlying representation outside their defining scope. Provides
+        type safety without runtime overhead, replacing tagged types and
+        value classes from Scala 2.
+      tags:
+        - Language Feature
+        - Scala 3
+    - term: Pattern Matching
+      definition: >-
+        A powerful control flow feature in Scala that allows matching values
+        against patterns (literals, constructors, guards, typed patterns).
+        Works with case classes, sealed traits, and extractors. In Scala 3,
+        pattern matching is exhaustively checked by the compiler.
+      tags:
+        - Language Feature
+        - Scala
+    - term: sbt (Simple Build Tool)
+      definition: >-
+        The dominant build tool in the Scala ecosystem (90% adoption). Uses
+        a Scala-based DSL for build definitions. sbt 2.0 introduces significant
+        performance improvements. Supports incremental compilation, test
+        frameworks, and plugin ecosystem.
+      tags:
+        - Build Tool
+        - Tooling
+    - term: Scala.js
+      definition: >-
+        A Scala compiler backend that compiles Scala code to JavaScript,
+        enabling Scala to run in browsers and Node.js. Allows sharing of
+        data model and business logic code between server-side JVM Scala
+        and client-side JavaScript.
+      tags:
+        - Cross-Platform
+        - JavaScript
+        - Runtime
+    - term: Scala Native
+      definition: >-
+        A Scala compiler backend that compiles Scala to native machine code
+        via LLVM, without a JVM. Achieves fast startup times and low memory
+        footprint. Used for CLI tools and systems programming.
+      tags:
+        - Cross-Platform
+        - Native
+        - Runtime
+    - term: Sealed Trait
+      definition: >-
+        A trait in Scala whose subtypes are all defined in the same file.
+        Enables exhaustive pattern matching — the compiler warns if not
+        all cases are handled. The foundation for algebraic data types (ADTs)
+        and discriminated unions in Scala.
+      tags:
+        - Language Feature
+        - Scala
+    - term: Type Class
+      definition: >-
+        A design pattern (from Haskell) that enables ad-hoc polymorphism
+        without inheritance. A type class defines a set of operations; types
+        opt in by providing `given` instances. Cats defines type classes like
+        Functor, Monad, Eq, Ord, Show for principled generic programming.
+      tags:
+        - Design Pattern
+        - Functional Programming
+    - term: Union Type
+      definition: >-
+        A Scala 3 language feature allowing a type to be one of several
+        alternatives (e.g., `String | Int | Boolean`). A simpler, more
+        readable alternative to sealed trait hierarchies for simple
+        discriminated union types.
+      tags:
+        - Language Feature
+        - Scala 3

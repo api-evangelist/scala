@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api-evangelist.com/schemas/scala/library",
+  "title": "Scala Library",
+  "description": "Schema representing a Scala library or framework, including its build tool coordinates, compatibility, and classification.",
+  "type": "object",
+  "required": ["name", "groupId", "artifactId", "currentVersion"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable library name.",
+      "example": "Cats"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the library's purpose."
+    },
+    "groupId": {
+      "type": "string",
+      "description": "Maven/sbt group identifier.",
+      "example": "org.typelevel"
+    },
+    "artifactId": {
+      "type": "string",
+      "description": "Maven/sbt artifact identifier (without Scala version suffix).",
+      "example": "cats-core"
+    },
+    "currentVersion": {
+      "type": "string",
+      "description": "Latest stable release version.",
+      "example": "2.12.0"
+    },
+    "scalaVersions": {
+      "type": "array",
+      "description": "Supported Scala versions.",
+      "items": {
+        "type": "string",
+        "enum": ["2.12", "2.13", "3"]
+      },
+      "example": ["2.13", "3"]
+    },
+    "runtimes": {
+      "type": "array",
+      "description": "Supported Scala runtimes.",
+      "items": {
+        "type": "string",
+        "enum": ["jvm", "js", "native"]
+      },
+      "example": ["jvm", "js", "native"]
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "functional-programming",
+        "effect-system",
+        "http",
+        "database",
+        "json",
+        "streaming",
+        "testing",
+        "build-tool",
+        "actor-model",
+        "big-data",
+        "logging",
+        "serialization",
+        "configuration",
+        "other"
+      ],
+      "description": "Primary category of the library."
+    },
+    "license": {
+      "type": "string",
+      "description": "Open source license identifier.",
+      "example": "Apache-2.0"
+    },
+    "githubUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "GitHub repository URL."
+    },
+    "documentationUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official documentation URL."
+    },
+    "sbtDependency": {
+      "type": "string",
+      "description": "sbt library dependency declaration.",
+      "example": "\"org.typelevel\" %% \"cats-core\" % \"2.12.0\""
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Key transitive dependencies.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effectSystem": {
+      "type": "string",
+      "enum": ["cats-effect", "zio", "monix", "futures", "none"],
+      "description": "Effect system this library integrates with (if any)."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Classification tags."
+    }
+  }
+}

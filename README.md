@@ -1,147 +1,107 @@
-# Scala Programming Language APIs (scala)
-A collection of APIs and resources for the Scala programming language ecosystem
+# Scala
 
-**URL:** [Visit APIs.json URL](https://www.scala-lang.org/apis.yaml)
+A topic collection covering the Scala programming language ecosystem, including its standard library, key frameworks, and widely-used libraries. Scala is a strongly-typed, JVM-based language blending object-oriented and functional programming, widely used in big data engineering, distributed systems, fintech, and backend development. Scala 3.8 is the current major version (January 2026).
 
-## Tags:
+**Type:** Topic Collection
+**Tags:** Big Data, Distributed Systems, Functional Programming, JVM, Programming Language, Scala, Scala 3, Type Safety
 
- - scala, programming language, jvm, functional programming, object-oriented
-
-## Timestamps
-
-- **Created:** 2024-01-15 00:00:00+00:00 
-- **Modified:** 2024-01-15 00:00:00+00:00 
-
-## APIs
+## APIs and Libraries
 
 ### Scala Standard Library API
-Core Scala language API documentation and standard library
+Core Scala language API providing data structures, collections, concurrent primitives, and runtime utilities. Runs on JVM, JavaScript (Scala.js), and Native (Scala Native) runtimes.
 
-**Human URL:** [https://www.scala-lang.org/api/current/](https://www.scala-lang.org/api/current/)
+- **Documentation:** [https://www.scala-lang.org/api/current/](https://www.scala-lang.org/api/current/)
+- **GitHub:** [https://github.com/scala/scala](https://github.com/scala/scala)
 
+### Akka API
+Toolkit for building highly concurrent, distributed, and fault-tolerant applications using the Actor model. Includes Akka Actors, Akka HTTP, Akka Streams, and Akka Cluster.
 
-#### Tags:
-
- - standard library, core, documentation
-
-#### Properties
-
-- [Documentation](https://www.scala-lang.org/api/current/)
-- [API Documentation](https://www.scala-lang.org/api/current/index.html)
-- [GitHub](https://github.com/scala/scala)
+- **Documentation:** [https://doc.akka.io/docs/akka/current/](https://doc.akka.io/docs/akka/current/)
+- **GitHub:** [https://github.com/akka/akka](https://github.com/akka/akka)
 
 ### Akka HTTP API
-HTTP server and client library built on top of Akka actors
+Full server- and client-side HTTP stack built on Akka Streams. High-throughput, non-blocking HTTP handling with a powerful Scala DSL for routing and marshalling.
 
-**Human URL:** [https://doc.akka.io/docs/akka-http/current/](https://doc.akka.io/docs/akka-http/current/)
-
-
-#### Tags:
-
- - http, server, client, reactive
-
-#### Properties
-
-- [Documentation](https://doc.akka.io/docs/akka-http/current/)
-- [API Documentation](https://doc.akka.io/api/akka-http/current/)
-- [GitHub](https://github.com/akka/akka-http)
-- [Getting Started](https://doc.akka.io/docs/akka-http/current/introduction.html)
+- **Documentation:** [https://doc.akka.io/docs/akka-http/current/](https://doc.akka.io/docs/akka-http/current/)
+- **GitHub:** [https://github.com/akka/akka-http](https://github.com/akka/akka-http)
 
 ### Play Framework API
-Web framework for building scalable web applications
+Reactive web framework for Scala (and Java) built on Akka. Provides MVC routing, template engine, WS client, and reactive database integrations for web applications and REST APIs.
 
-**Human URL:** [https://www.playframework.com/](https://www.playframework.com/)
-
-
-#### Tags:
-
- - web framework, mvc, reactive
-
-#### Properties
-
-- [Documentation](https://www.playframework.com/documentation/latest/Home)
-- [API Documentation](https://www.playframework.com/documentation/latest/api/scala/)
-- [GitHub](https://github.com/playframework/playframework)
-- [Tutorials](https://www.playframework.com/documentation/latest/Tutorials)
-
-### Cats Library API
-Lightweight, modular library for functional programming in Scala
-
-**Human URL:** [https://typelevel.org/cats/](https://typelevel.org/cats/)
-
-
-#### Tags:
-
- - functional programming, type classes, category theory
-
-#### Properties
-
-- [Documentation](https://typelevel.org/cats/)
-- [API Documentation](https://typelevel.org/cats/api/)
-- [GitHub](https://github.com/typelevel/cats)
-- [Getting Started](https://typelevel.org/cats/getting_started.html)
-
-### Slick Database Library API
-Functional Relational Mapping for Scala database access
-
-**Human URL:** [https://scala-slick.org/](https://scala-slick.org/)
-
-
-#### Tags:
-
- - database, orm, functional, sql
-
-#### Properties
-
-- [Documentation](https://scala-slick.org/doc/stable/)
-- [API Documentation](https://scala-slick.org/doc/stable/api/)
-- [GitHub](https://github.com/slick/slick)
-- [Getting Started](https://scala-slick.org/doc/stable/gettingstarted.html)
+- **Documentation:** [https://www.playframework.com/documentation/latest/Home](https://www.playframework.com/documentation/latest/Home)
+- **GitHub:** [https://github.com/playframework/playframework](https://github.com/playframework/playframework)
 
 ### ZIO API
-Type-safe, composable asynchronous and concurrent programming for Scala
+Type-safe, composable library for asynchronous and concurrent programming in Scala. Purely functional effect system with structured concurrency and a rich ecosystem (ZIO HTTP, ZIO Kafka, ZIO Schema).
 
-**Human URL:** [https://zio.dev/](https://zio.dev/)
+- **Documentation:** [https://zio.dev/overview/](https://zio.dev/overview/)
+- **GitHub:** [https://github.com/zio/zio](https://github.com/zio/zio)
 
+### Cats API
+Lightweight, modular library for functional programming in Scala. Provides type class abstractions (Functor, Monad, Applicative) for standard library types. Most widely used FP library in Scala (56% adoption).
 
-#### Tags:
+- **Documentation:** [https://typelevel.org/cats/](https://typelevel.org/cats/)
+- **GitHub:** [https://github.com/typelevel/cats](https://github.com/typelevel/cats)
 
- - functional effects, async, concurrent, type-safe
+### http4s API
+Typeful, functional, streaming HTTP library built on cats-effect and fs2. Server and client abstractions with Blaze, Ember, Jetty, and Tomcat backends. Second most popular HTTP library (45% adoption).
 
-#### Properties
+- **Documentation:** [https://http4s.org/v1/docs/](https://http4s.org/v1/docs/)
+- **GitHub:** [https://github.com/http4s/http4s](https://github.com/http4s/http4s)
 
-- [Documentation](https://zio.dev/overview/)
-- [API Documentation](https://javadoc.io/doc/dev.zio/zio_3/latest/)
-- [GitHub](https://github.com/zio/zio)
-- [Getting Started](https://zio.dev/overview/getting-started)
+### Slick API
+Functional Relational Mapping (FRM) for Scala providing type-safe, composable database access. Supports PostgreSQL, MySQL, H2, SQLite, and more.
 
-### Circe JSON API
-JSON library for Scala powered by Cats
+- **Documentation:** [https://scala-slick.org/doc/stable/](https://scala-slick.org/doc/stable/)
+- **GitHub:** [https://github.com/slick/slick](https://github.com/slick/slick)
 
-**Human URL:** [https://circe.github.io/circe/](https://circe.github.io/circe/)
+### Circe API
+Most widely used JSON library for Scala, built on Cats. Provides encoding, decoding, traversal, and transformation of JSON values with automatic derivation for case classes.
 
+- **Documentation:** [https://circe.github.io/circe/](https://circe.github.io/circe/)
+- **GitHub:** [https://github.com/circe/circe](https://github.com/circe/circe)
 
-#### Tags:
+### Apache Spark API
+Dominant big data processing framework in the Scala ecosystem. Enables large-scale data processing, SQL analytics, streaming, and machine learning across distributed clusters.
 
- - json, parsing, serialization, functional
+- **Documentation:** [https://spark.apache.org/docs/latest/api/scala/](https://spark.apache.org/docs/latest/api/scala/)
+- **GitHub:** [https://github.com/apache/spark](https://github.com/apache/spark)
 
-#### Properties
+### sbt Build Tool
+Dominant build tool in the Scala ecosystem (90% adoption). sbt 2.0 release candidates show up to 41% faster startup. Supports incremental compilation, test frameworks, and a rich plugin ecosystem.
 
-- [Documentation](https://circe.github.io/circe/)
-- [API Documentation](https://circe.github.io/circe/api/)
-- [GitHub](https://github.com/circe/circe)
-- [Getting Started](https://circe.github.io/circe/quickstart.html)
+- **Documentation:** [https://www.scala-sbt.org/1.x/docs/](https://www.scala-sbt.org/1.x/docs/)
+- **GitHub:** [https://github.com/sbt/sbt](https://github.com/sbt/sbt)
 
-## Common Properties
+## Artifacts
 
-- [Website](https://www.scala-lang.org/)
-- [Blog](https://www.scala-lang.org/blog/)
-- [Forums](https://users.scala-lang.org/)
-- [GitHub Organization](https://github.com/scala)
-- [Twitter](https://twitter.com/scala_lang)
+### JSON Schema
+- [Scala Library Schema](json-schema/scala-library-schema.json) — Schema for a Scala library catalog entry including Maven coordinates, Scala version compatibility, runtime support, and effect system integration.
+
+### JSON Structure
+- [Scala Library Structure](json-structure/scala-library-structure.json) — Structural documentation for Scala library catalog entries.
+
+### JSON-LD Context
+- [Scala Context](json-ld/scala-context.jsonld) — Linked data context mapping Scala ecosystem vocabulary.
+
+### Vocabulary
+- [Scala Vocabulary](vocabulary/scala-vocabulary.yml) — Domain vocabulary covering Actor Model, Case Class, Effect System, Fiber, For Comprehension, Monad, Pattern Matching, Sealed Trait, Type Class, and more.
+
+### Examples
+- [ZIO HTTP Server Example](examples/scala-zio-http-example.json) — Example of a simple ZIO HTTP server implementing a REST API in Scala 3.
+
+## Common Resources
+
+- [Scala Language Website](https://www.scala-lang.org/)
+- [Scala Documentation](https://docs.scala-lang.org/)
+- [Scala Blog](https://www.scala-lang.org/blog/)
+- [Scala Users Forum](https://users.scala-lang.org/)
+- [Scala GitHub Organization](https://github.com/scala)
+- [Scala Times Newsletter](https://scalatimes.com/)
+- [Scala Discord](https://discord.gg/scala)
 
 ## Maintainers
 
-**FN:** Scala Center
-
-**Email:** scala.center@epfl.ch
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
+**URL:** https://apievangelist.com

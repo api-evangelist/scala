@@ -1,0 +1,23 @@
+{
+  "structure": {
+    "name": "Scala Library",
+    "description": "Structural documentation for a Scala library entry in the ecosystem catalog.",
+    "fields": [
+      { "name": "name", "type": "string", "required": true, "description": "Library display name" },
+      { "name": "description", "type": "string", "required": false },
+      { "name": "groupId", "type": "string", "required": true, "description": "Maven group ID (e.g., org.typelevel)" },
+      { "name": "artifactId", "type": "string", "required": true, "description": "Maven artifact ID without Scala version suffix" },
+      { "name": "currentVersion", "type": "string", "required": true, "description": "Latest stable version" },
+      { "name": "scalaVersions", "type": "array<enum[2.12,2.13,3]>", "required": false },
+      { "name": "runtimes", "type": "array<enum[jvm,js,native]>", "required": false },
+      { "name": "category", "type": "enum[functional-programming,effect-system,http,database,json,streaming,testing,build-tool,actor-model,big-data,logging,serialization,configuration,other]", "required": false },
+      { "name": "license", "type": "string", "required": false, "description": "SPDX license identifier" },
+      { "name": "githubUrl", "type": "uri", "required": false },
+      { "name": "documentationUrl", "type": "uri", "required": false },
+      { "name": "sbtDependency", "type": "string", "required": false, "description": "sbt dependency declaration string" },
+      { "name": "dependencies", "type": "array<string>", "required": false },
+      { "name": "effectSystem", "type": "enum[cats-effect,zio,monix,futures,none]", "required": false },
+      { "name": "tags", "type": "array<string>", "required": false }
+    ]
+  }
+}
