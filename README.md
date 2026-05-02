@@ -89,6 +89,7 @@ Dominant build tool in the Scala ecosystem (90% adoption). sbt 2.0 release candi
 
 ### Examples
 - [ZIO HTTP Server Example](examples/scala-zio-http-example.json) — Example of a simple ZIO HTTP server implementing a REST API in Scala 3.
+- [http4s REST API with cats-effect](examples/scala-cats-effect-http4s-example.json) — Complete http4s HTTP server implementing a JSON REST API using cats-effect IO, circe, and Scala 3 syntax.
 
 ## Common Resources
 

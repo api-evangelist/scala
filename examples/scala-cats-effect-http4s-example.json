@@ -1,0 +1,100 @@
+{
+  "example": {
+    "title": "http4s REST API with cats-effect — Scala 3",
+    "description": "Example of a complete http4s HTTP server implementing a JSON REST API using cats-effect IO, circe for JSON encoding/decoding, and Scala 3 syntax.",
+    "language": "scala",
+    "scalaVersion": "3.4.2",
+    "libraries": [
+      { "name": "http4s-ember-server", "version": "0.23.27", "groupId": "org.http4s" },
+      { "name": "http4s-circe", "version": "0.23.27", "groupId": "org.http4s" },
+      { "name": "circe-generic", "version": "0.14.9", "groupId": "io.circe" },
+      { "name": "cats-effect", "version": "3.5.4", "groupId": "org.typelevel" }
+    ],
+    "sbtDependencies": [
+      "\"org.http4s\" %% \"http4s-ember-server\" % \"0.23.27\"",
+      "\"org.http4s\" %% \"http4s-circe\" % \"0.23.27\"",
+      "\"io.circe\" %% \"circe-generic\" % \"0.14.9\"",
+      "\"org.typelevel\" %% \"cats-effect\" % \"3.5.4\""
+    ],
+    "code": {
+      "file": "Main.scala",
+      "content": [
+        "import cats.effect.*",
+        "import cats.syntax.all.*",
+        "import io.circe.generic.auto.*",
+        "import org.http4s.*",
+        "import org.http4s.circe.CirceEntityCodec.*",
+        "import org.http4s.dsl.io.*",
+        "import org.http4s.ember.server.EmberServerBuilder",
+        "import com.comcast.ip4s.*",
+        "",
+        "case class User(id: Long, name: String, email: String)",
+        "case class CreateUserRequest(name: String, email: String)",
+        "",
+        "object Main extends IOApp.Simple:",
+        "  val users = Map(",
+        "    1L -> User(1L, \"Alice\", \"alice@example.com\"),",
+        "    2L -> User(2L, \"Bob\", \"bob@example.com\")",
+        "  )",
+        "",
+        "  val routes = HttpRoutes.of[IO] {",
+        "    case GET -> Root / \"users\" =>",
+        "      Ok(users.values.toList)",
+        "",
+        "    case GET -> Root / \"users\" / LongVar(id) =>",
+        "      users.get(id).fold(NotFound())(user => Ok(user))",
+        "",
+        "    case req @ POST -> Root / \"users\" =>",
+        "      for",
+        "        body <- req.as[CreateUserRequest]",
+        "        newId = users.keys.maxOption.getOrElse(0L) + 1",
+        "        user = User(newId, body.name, body.email)",
+        "        resp <- Created(user)",
+        "      yield resp",
+        "  }",
+        "",
+        "  val run =",
+        "    EmberServerBuilder",
+        "      .default[IO]",
+        "      .withHost(ipv4\"0.0.0.0\")",
+        "      .withPort(port\"8080\")",
+        "      .withHttpApp(routes.orNotFound)",
+        "      .build",
+        "      .useForever"
+      ]
+    },
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/users",
+        "description": "List all users",
+        "response": {
+          "status": 200,
+          "body": [
+            { "id": 1, "name": "Alice", "email": "alice@example.com" },
+            { "id": 2, "name": "Bob", "email": "bob@example.com" }
+          ]
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/users/1",
+        "description": "Get user by ID",
+        "response": {
+          "status": 200,
+          "body": { "id": 1, "name": "Alice", "email": "alice@example.com" }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/users",
+        "description": "Create a new user",
+        "requestBody": { "name": "Charlie", "email": "charlie@example.com" },
+        "response": {
+          "status": 201,
+          "body": { "id": 3, "name": "Charlie", "email": "charlie@example.com" }
+        }
+      }
+    ]
+  }
+}

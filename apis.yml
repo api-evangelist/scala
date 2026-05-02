@@ -287,6 +287,9 @@ common:
   - type: Examples
     url: https://github.com/api-evangelist/scala/blob/main/examples/scala-zio-http-example.json
     name: ZIO HTTP Server Example
+  - type: Examples
+    url: https://github.com/api-evangelist/scala/blob/main/examples/scala-cats-effect-http4s-example.json
+    name: http4s REST API with cats-effect Example
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
