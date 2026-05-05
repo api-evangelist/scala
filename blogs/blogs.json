@@ -1,0 +1,13 @@
+{
+  "repo": "scala",
+  "feeds": [
+    {
+      "source": "https://www.scala-lang.org/blog/",
+      "feed_url": "https://www.scala-lang.org/feed/index.xml",
+      "saved": 10,
+      "title": "The Scala Programming Language"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:35:33Z"
+}
