@@ -5,6 +5,13 @@
       "source": "https://www.scala-lang.org/rss.xml",
       "feed_url": "https://www.scala-lang.org/rss.xml",
       "title": "",
+      "saved": 2,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.scala-lang.org/feed/index.xml",
+      "feed_url": "https://www.scala-lang.org/feed/index.xml",
+      "title": "",
       "saved": 0,
       "method": "feed"
     },
@@ -16,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 24,
-  "fetched": "2026-06-01T23:35:02Z"
+  "post_count": 27,
+  "fetched": "2026-06-14T20:42:17Z"
 }
