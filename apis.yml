@@ -257,7 +257,7 @@ common:
   - type: Documentation
     url: https://docs.scala-lang.org/
     name: Scala Documentation
-  - type: Forum
+  - type: Forums
     url: https://users.scala-lang.org/
     name: Scala Users Forum
   - type: GitHub
