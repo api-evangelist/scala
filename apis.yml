@@ -248,6 +248,8 @@ apis:
       - type: GitHub
         url: https://github.com/sbt/sbt
 common:
+  - type: DomainSecurity
+    url: security/scala-domain-security.yml
   - type: Website
     url: https://www.scala-lang.org/
     name: Scala Language Website

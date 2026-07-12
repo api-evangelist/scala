@@ -1,0 +1,31 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.scala-lang.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 12 07:56:31 2026 GMT
+  hsts: false
+- host: doc.akka.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  1 15:03:40 2026 GMT
+  hsts: false
+- host: www.playframework.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  4 01:53:33 2026 GMT
+  hsts: false
+domains:
+- domain: scala-lang.org
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
+- domain: akka.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
