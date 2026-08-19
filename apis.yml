@@ -33,7 +33,7 @@ tags:
 type: Index
 created: '2024-01-15'
 modified: '2026-05-02'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: scala:scala-lang
     name: Scala Standard Library API
