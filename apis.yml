@@ -85,6 +85,13 @@ apis:
       powerful Scala DSL for routing and marshalling.
     tags:
       - Akka
+      - Clients
+      - HTTP
+      - Reactive
+      - Scala
+      - Server
+    tags_raw:
+      - Akka
       - Client
       - HTTP
       - Reactive
@@ -232,6 +239,13 @@ apis:
       - Big Data
       - Data Engineering
       - Distributed Systems
+      - Machine-Learning
+      - Scala
+      - Spark
+    tags_raw:
+      - Big Data
+      - Data Engineering
+      - Distributed Systems
       - Machine Learning
       - Scala
       - Spark
@@ -250,6 +264,10 @@ apis:
       (90% adoption). Its Server API enables IDE integration via the Build Server
       Protocol (BSP). sbt 2.0 release candidates show up to 41% faster startup.
     tags:
+      - Build Tools
+      - Developer Tools
+      - Scala
+    tags_raw:
       - Build Tool
       - Developer Tools
       - Scala
