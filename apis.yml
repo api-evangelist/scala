@@ -8,6 +8,17 @@ description: >-
   and backend development. The ecosystem includes the Akka actor framework, Play
   web framework, ZIO effect system, Cats typeclass library, http4s, Slick,
   sbt build tool, and Spark. Scala 3.8 is the current major version (January 2026).
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
