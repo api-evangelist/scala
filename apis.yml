@@ -275,7 +275,7 @@ apis:
       (90% adoption). Its Server API enables IDE integration via the Build Server
       Protocol (BSP). sbt 2.0 release candidates show up to 41% faster startup.
     tags:
-      - Build Tools
+      - Build Tool
       - Developer Tools
       - Scala
     tags_raw:
