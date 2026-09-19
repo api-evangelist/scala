@@ -100,7 +100,7 @@ apis:
       - HTTP
       - Reactive
       - Scala
-      - Server
+      - Servers
     tags_raw:
       - Akka
       - Client
