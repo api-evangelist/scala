@@ -1,5 +1,6 @@
 aid: scala
 name: Scala
+kind: topic
 description: >-
   A topic collection covering the Scala programming language ecosystem, including
   its standard library, key frameworks, and widely-used libraries. Scala is a
@@ -9,15 +10,20 @@ description: >-
   web framework, ZIO effect system, Cats typeclass library, http4s, Slick,
   sbt build tool, and Spark. Scala 3.8 is the current major version (January 2026).
 deliveryModel:
-  model: unknown
-  open_source: false
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: scala/scala
+    spdx: Apache-2.0
+    stars: 14563
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - none
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -250,7 +256,7 @@ apis:
       - Big Data
       - Data Engineering
       - Distributed Systems
-      - Machine-Learning
+      - Machine Learning
       - Scala
       - Spark
     tags_raw:
@@ -260,6 +266,7 @@ apis:
       - Machine Learning
       - Scala
       - Spark
+      - Machine-Learning
     humanURL: https://spark.apache.org/docs/latest/api/scala/
     properties:
       - type: Documentation
