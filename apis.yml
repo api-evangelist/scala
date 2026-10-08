@@ -296,6 +296,12 @@ apis:
       - type: GitHub
         url: https://github.com/sbt/sbt
 common:
+  - type: Plans
+    url: plans/scala-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/scala-rate-limits.yml
+  - type: FinOps
+    url: finops/scala-finops.yml
   - type: DomainSecurity
     url: security/scala-domain-security.yml
   - type: Website
