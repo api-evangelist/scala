@@ -1,4 +1,4 @@
-# Scala
+# scala
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,109 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A topic collection covering the Scala programming language ecosystem, including its standard library, key frameworks, and widely-used libraries. Scala is a strongly-typed, JVM-based language blending object-oriented and functional programming, widely used in big data engineering, distributed systems, fintech, and backend development. Scala 3.8 is the current major version (January 2026).
+## scala on APIs.io
 
-**Type:** Topic Collection
-**Tags:** Big Data, Distributed Systems, Functional Programming, JVM, Programming Language, Scala, Scala 3, Type Safety
+Everything profiled for scala is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/scala/](https://apis.io/providers/scala/)** — or go straight to one of the APIs or properties below.
 
-## APIs and Libraries
+## API Evangelist rating
 
-### Scala Standard Library API
-Core Scala language API providing data structures, collections, concurrent primitives, and runtime utilities. Runs on JVM, JavaScript (Scala.js), and Native (Scala Native) runtimes.
+Not yet rated. See [apis.io/providers/scala/](https://apis.io/providers/scala/).
 
-- **Documentation:** [https://www.scala-lang.org/api/current/](https://www.scala-lang.org/api/current/)
-- **GitHub:** [https://github.com/scala/scala](https://github.com/scala/scala)
+## How this profile is made
 
-### Akka API
-Toolkit for building highly concurrent, distributed, and fault-tolerant applications using the Actor model. Includes Akka Actors, Akka HTTP, Akka Streams, and Akka Cluster.
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- **Documentation:** [https://doc.akka.io/docs/akka/current/](https://doc.akka.io/docs/akka/current/)
-- **GitHub:** [https://github.com/akka/akka](https://github.com/akka/akka)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for scala: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### Akka HTTP API
-Full server- and client-side HTTP stack built on Akka Streams. High-throughput, non-blocking HTTP handling with a powerful Scala DSL for routing and marshalling.
+## Open an issue
 
-- **Documentation:** [https://doc.akka.io/docs/akka-http/current/](https://doc.akka.io/docs/akka-http/current/)
-- **GitHub:** [https://github.com/akka/akka-http](https://github.com/akka/akka-http)
-
-### Play Framework API
-Reactive web framework for Scala (and Java) built on Akka. Provides MVC routing, template engine, WS client, and reactive database integrations for web applications and REST APIs.
-
-- **Documentation:** [https://www.playframework.com/documentation/latest/Home](https://www.playframework.com/documentation/latest/Home)
-- **GitHub:** [https://github.com/playframework/playframework](https://github.com/playframework/playframework)
-
-### ZIO API
-Type-safe, composable library for asynchronous and concurrent programming in Scala. Purely functional effect system with structured concurrency and a rich ecosystem (ZIO HTTP, ZIO Kafka, ZIO Schema).
-
-- **Documentation:** [https://zio.dev/overview/](https://zio.dev/overview/)
-- **GitHub:** [https://github.com/zio/zio](https://github.com/zio/zio)
-
-### Cats API
-Lightweight, modular library for functional programming in Scala. Provides type class abstractions (Functor, Monad, Applicative) for standard library types. Most widely used FP library in Scala (56% adoption).
-
-- **Documentation:** [https://typelevel.org/cats/](https://typelevel.org/cats/)
-- **GitHub:** [https://github.com/typelevel/cats](https://github.com/typelevel/cats)
-
-### http4s API
-Typeful, functional, streaming HTTP library built on cats-effect and fs2. Server and client abstractions with Blaze, Ember, Jetty, and Tomcat backends. Second most popular HTTP library (45% adoption).
-
-- **Documentation:** [https://http4s.org/v1/docs/](https://http4s.org/v1/docs/)
-- **GitHub:** [https://github.com/http4s/http4s](https://github.com/http4s/http4s)
-
-### Slick API
-Functional Relational Mapping (FRM) for Scala providing type-safe, composable database access. Supports PostgreSQL, MySQL, H2, SQLite, and more.
-
-- **Documentation:** [https://scala-slick.org/doc/stable/](https://scala-slick.org/doc/stable/)
-- **GitHub:** [https://github.com/slick/slick](https://github.com/slick/slick)
-
-### Circe API
-Most widely used JSON library for Scala, built on Cats. Provides encoding, decoding, traversal, and transformation of JSON values with automatic derivation for case classes.
-
-- **Documentation:** [https://circe.github.io/circe/](https://circe.github.io/circe/)
-- **GitHub:** [https://github.com/circe/circe](https://github.com/circe/circe)
-
-### Apache Spark API
-Dominant big data processing framework in the Scala ecosystem. Enables large-scale data processing, SQL analytics, streaming, and machine learning across distributed clusters.
-
-- **Documentation:** [https://spark.apache.org/docs/latest/api/scala/](https://spark.apache.org/docs/latest/api/scala/)
-- **GitHub:** [https://github.com/apache/spark](https://github.com/apache/spark)
-
-### sbt Build Tool
-Dominant build tool in the Scala ecosystem (90% adoption). sbt 2.0 release candidates show up to 41% faster startup. Supports incremental compilation, test frameworks, and a rich plugin ecosystem.
-
-- **Documentation:** [https://www.scala-sbt.org/1.x/docs/](https://www.scala-sbt.org/1.x/docs/)
-- **GitHub:** [https://github.com/sbt/sbt](https://github.com/sbt/sbt)
-
-## Artifacts
-
-### JSON Schema
-- [Scala Library Schema](json-schema/scala-library-schema.json) — Schema for a Scala library catalog entry including Maven coordinates, Scala version compatibility, runtime support, and effect system integration.
-
-### JSON Structure
-- [Scala Library Structure](json-structure/scala-library-structure.json) — Structural documentation for Scala library catalog entries.
-
-### JSON-LD Context
-- [Scala Context](json-ld/scala-context.jsonld) — Linked data context mapping Scala ecosystem vocabulary.
-
-### Vocabulary
-- [Scala Vocabulary](vocabulary/scala-vocabulary.yml) — Domain vocabulary covering Actor Model, Case Class, Effect System, Fiber, For Comprehension, Monad, Pattern Matching, Sealed Trait, Type Class, and more.
-
-### Examples
-- [ZIO HTTP Server Example](examples/scala-zio-http-example.json) — Example of a simple ZIO HTTP server implementing a REST API in Scala 3.
-- [http4s REST API with cats-effect](examples/scala-cats-effect-http4s-example.json) — Complete http4s HTTP server implementing a JSON REST API using cats-effect IO, circe, and Scala 3 syntax.
-
-## Common Resources
-
-- [Scala Language Website](https://www.scala-lang.org/)
-- [Scala Documentation](https://docs.scala-lang.org/)
-- [Scala Blog](https://www.scala-lang.org/blog/)
-- [Scala Users Forum](https://users.scala-lang.org/)
-- [Scala GitHub Organization](https://github.com/scala)
-- [Scala Times Newsletter](https://scalatimes.com/)
-- [Scala Discord](https://discord.gg/scala)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/scala/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
